@@ -1,4 +1,10 @@
-### Fake User Agent Written by Go
+### Fake UserAgent
+
+
+![](https://img.shields.io/badge/fake_useragent_go_ng-v1.0.0-519dd9.svg)
+![](https://img.shields.io/badge/language-golang-orange.svg)
+[![](https://img.shields.io/badge/weibo-@谢小小路-red.svg)](https://weibo.com/1948244870/profile?topnav=1&wvr=6)
+[![](https://img.shields.io/badge/jianshu-@谢小路-F59581.svg)](https://www.jianshu.com/u/58f0817209aa)
 
 
 ### 1. Features
@@ -60,7 +66,7 @@ Opera/9.64 (X11; Linux x86_64; U; en-GB) Presto/2.1.1
 
 - UserAgentStringOk: http://useragentstring.com/ 网站的UserAgent
 - CloudFrontNetOk: http://d2g6u4gh6d9rq0.cloudfront.net/browsers/fake_useragent_0.1.9.json 的UserAgent
-- Cache : 代码内置的随机 50 个UserAgent
+- CacheOk : 代码内置的随机 50 个UserAgent
 
 
 参考：[Python 版 fake-useragent](https://github.com/hellysmile/fake-useragent)
