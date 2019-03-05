@@ -1,10 +1,13 @@
 ### Fake UserAgent
 
 
-![](https://img.shields.io/badge/fake_useragent_go_ng-v1.0.0-519dd9.svg)
+![](https://img.shields.io/badge/fakeuseragent-v1.0.0-519dd9.svg)
 ![](https://img.shields.io/badge/language-golang-orange.svg)
 [![](https://img.shields.io/badge/weibo-@谢小小路-red.svg)](https://weibo.com/1948244870/profile?topnav=1&wvr=6)
 [![](https://img.shields.io/badge/jianshu-@谢小路-F59581.svg)](https://www.jianshu.com/u/58f0817209aa)
+[![](https://img.shields.io/badge/zhihu-@谢伟-F59581.svg)](https://www.zhihu.com/people/wu-xiao-shen-16/activities)
+[![](https://img.shields.io/badge/Bilibili-@Wuxiaoshen-F59581.svg)](https://space.bilibili.com/10056291)
+
 
 
 ### 1. Features
@@ -30,7 +33,15 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like
 
 ### 3. Usage
 
-```text
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/wuxiaoxiaoshen/fakeuseragent/application"
+)
+
 func main() {
 	fakeUserAgent := application.NewFakeUserAgent(true, false, false)
 	fmt.Println(fakeUserAgent.Random())
@@ -41,11 +52,12 @@ func main() {
 }
 
 
+
 ```
 
 结果：
 
-```go
+```text
 Mozilla/4.0 (compatible; MSIE 6.0; Windows ME) Opera 7.53  [en]
 Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_5_3; en-us) AppleWebKit/525.18 (KHTML, like Gecko) Version/3.1.1 Safari/525.20
 Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US) AppleWebKit/532.1 (KHTML, like Gecko) Chrome/4.0.220.1 Safari/532.1

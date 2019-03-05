@@ -1,4 +1,4 @@
-module fake-user-agent-go-ng
+module github.com/wuxiaoxiaoshen/fakeuseragent
 
 require (
 	github.com/PuerkitoBio/goquery v0.0.0-20180324162212-ea1bc64a6308
