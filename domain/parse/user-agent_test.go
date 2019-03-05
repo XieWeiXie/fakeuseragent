@@ -1,9 +1,10 @@
 package parse
 
 import (
-	"fake-user-agent-go-ng/infra/download"
 	"fmt"
 	"testing"
+
+	"github.com/wuxiaoxiaoshen/fakeuseragent/infra/download"
 )
 
 func TestUserAgentCom(t *testing.T) {
