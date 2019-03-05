@@ -19,12 +19,11 @@ func TestResponseDownload(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		doc, err := ResponseDownload(tt.url)
+		_, err := ResponseDownload(tt.url)
 		fmt.Println(err)
 		if err != nil {
 			t.Error("response download failed")
 		}
-		fmt.Println(doc.Html())
 
 	}
 

@@ -21,7 +21,6 @@ func TestUserAgentCom(t *testing.T) {
 
 	for _, tt := range tests {
 		url := fmt.Sprintf("http://useragentstring.com/pages/useragentstring.php?name=%s", tt.browserType)
-		doc, _ := download.ResponseDownload(url)
-		fmt.Println(UserAgentCom(doc))
+		download.ResponseDownload(url)
 	}
 }

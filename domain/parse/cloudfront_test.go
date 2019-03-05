@@ -1,7 +1,6 @@
 package parse
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/wuxiaoxiaoshen/fakeuseragent/infra/download"
@@ -13,11 +12,10 @@ func TestCloudFront(t *testing.T) {
 		"chrome", "opera", "firefox", "safari", "internetexplorer",
 	}
 	for _, browser := range browsersType {
-		rt, err := CloudFront(doc, browser)
+		_, err := CloudFront(doc, browser)
 		if err != nil {
 
 		}
-		fmt.Println(rt)
 	}
 
 }
