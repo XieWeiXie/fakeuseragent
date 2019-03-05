@@ -1,8 +1,9 @@
 package main
 
 import (
-	"fake-user-agent-go-ng/application"
 	"fmt"
+
+	"github.com/wuxiaoxiaoshen/fakeuseragent/application"
 )
 
 func main() {

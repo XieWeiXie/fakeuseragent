@@ -2,11 +2,12 @@ package application
 
 import (
 	"errors"
-	"fake-user-agent-go-ng/domain/global"
-	"fake-user-agent-go-ng/infra/download"
 	"fmt"
 
-	"fake-user-agent-go-ng/domain/parse"
+	"github.com/wuxiaoxiaoshen/fakeuseragent/domain/global"
+	"github.com/wuxiaoxiaoshen/fakeuseragent/infra/download"
+
+	"github.com/wuxiaoxiaoshen/fakeuseragent/domain/parse"
 
 	"math/rand"
 	"time"
