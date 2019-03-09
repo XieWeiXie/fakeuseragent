@@ -16,7 +16,7 @@
 
 - [http://useragentstring.com/](http://useragentstring.com/)
 - [https://www.w3schools.com/browsers/default.asp](https://www.w3schools.com/browsers/default.asp)
-- [http://d2g6u4gh6d9rq0.cloudfront.net/browsers/fake_useragent_0.1.9.json](http://d2g6u4gh6d9rq0.cloudfront.net/browsers/fake_useragent_0.1.9.json)
+- [~~http://d2g6u4gh6d9rq0.cloudfront.net/browsers/fake_useragent_0.1.9.json~~](http://d2g6u4gh6d9rq0.cloudfront.net/browsers/fake_useragent_0.1.9.json)
 
 
 ### 2. User-Agent 的知识
@@ -77,7 +77,7 @@ Opera/9.64 (X11; Linux x86_64; U; en-GB) Presto/2.1.1
 #### 3.3 参数
 
 - UserAgentStringOk: http://useragentstring.com/ 网站的UserAgent
-- CloudFrontNetOk: http://d2g6u4gh6d9rq0.cloudfront.net/browsers/fake_useragent_0.1.9.json 的UserAgent
+- ~~CloudFrontNetOk: http://d2g6u4gh6d9rq0.cloudfront.net/browsers/fake_useragent_0.1.9.json 的UserAgent~~
 - CacheOk : 代码内置的随机 50 个UserAgent
 
 
