@@ -1,10 +1,11 @@
 package parse
 
 import (
-	"fmt"
 	"testing"
 )
 
 func TestStatistics(t *testing.T) {
-	fmt.Println(Statistics())
+	if len(Statistics()) == 0 {
+		t.Errorf("Statistics() should not be nil")
+	}
 }

@@ -1,30 +1,37 @@
 package download
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/PuerkitoBio/goquery"
 )
 
 func TestResponseDownload(t *testing.T) {
-
-	tests := []struct {
+	type args struct {
 		url string
+	}
+	tests := []struct {
+		name    string
+		args    args
+		want    *goquery.Document
+		wantErr bool
 	}{
+		// TODO: Add test cases.
 		{
-			url: "http://d2g6u4gh6d9rq0.cloudfront.net/browsers/fake_useragent_0.1.9.json",
-		},
-		{
-			url: "https://github.com/wuxiaoxiaoshen",
+			name: "test for download",
+			args: args{
+				url: "https://www.baidu.com",
+			},
 		},
 	}
-
 	for _, tt := range tests {
-		_, err := ResponseDownload(tt.url)
-		fmt.Println(err)
-		if err != nil {
-			t.Error("response download failed")
-		}
+		t.Run(tt.name, func(t *testing.T) {
+			_, err := ResponseDownload(tt.args.url)
+			if err != nil {
+				t.Errorf("ResponseDownload() error = %v, wantErr %v", err, tt.wantErr)
+				return
+			}
 
+		})
 	}
-
 }

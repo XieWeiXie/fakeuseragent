@@ -12,12 +12,12 @@ var (
 	ErrInvalid = errors.New("invalid json")
 )
 
+// CloudFront return Result list.
+// Deprecated: cloudFront.net was be removed
 func CloudFront(doc *goquery.Document, browserType string) ([]gjson.Result, error) {
-
 	if !gjson.Valid(doc.Text()) {
 		return nil, ErrInvalid
 	}
-
 	jsonResult := gjson.Parse(doc.Text())
 	browserUserAgent := jsonResult.Get("browsers." + browserType)
 	browserUserAgentOk := browserUserAgent.IsArray()

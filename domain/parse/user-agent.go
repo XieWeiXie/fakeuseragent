@@ -12,13 +12,13 @@ var browserList = []string{
 	"FireFox",
 }
 
+// UserAgentCom return a string list
 func UserAgentCom(doc *goquery.Document) ([]string, error) {
 
 	var newBrowserList = make([]string, 1)
 
 	doc.Find("div#liste ul li").Each(func(i int, selection *goquery.Selection) {
 		userAgent := selection.Find("a").Text()
-		//fmt.Println(userAgent)
 		newBrowserList = append(newBrowserList, userAgent)
 	})
 	return newBrowserList, nil

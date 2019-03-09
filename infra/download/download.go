@@ -13,6 +13,8 @@ var (
 	ErrResponse = errors.New("response err")
 )
 
+// Get html resource by http
+// return *goquery.Document and error
 func ResponseDownload(url string) (*goquery.Document, error) {
 	request, err := http.NewRequest("GET", url, nil)
 	if err != nil {

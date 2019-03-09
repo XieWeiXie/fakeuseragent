@@ -4,6 +4,7 @@ import "fmt"
 
 const Version = "0.1.10"
 
+// source link
 var (
 	BROWSERS_STATS_PAGE = "https://www.w3schools.com/browsers/default.asp"
 	BROWSER_BASE_PAGE   = "http://useragentstring.com/pages/useragentstring.php?name=%s"
@@ -13,6 +14,7 @@ var (
 var OVERRIDES = make(map[string]string)
 var LOCALUSERAGENT = make(map[string][]string)
 
+// local UserAgent, total count 50
 func init() {
 	OVERRIDES = map[string]string{
 		"Edge/IE": "Internet Explorer",

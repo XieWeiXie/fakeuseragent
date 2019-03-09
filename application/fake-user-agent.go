@@ -16,6 +16,7 @@ import (
 	"github.com/tidwall/gjson"
 )
 
+// FakeUserAgent: CloudFrontNetOk field should always be false
 type FakeUserAgent struct {
 	UserAgentStringOk bool
 	CloudFrontNetOk   bool
@@ -34,43 +35,53 @@ func NewFakeUserAgent(UserAgentStringOk bool, CloudFrontNetOk bool, CacheOK bool
 	}
 }
 
+// IE UserAgent
 func (F *FakeUserAgent) IE() string {
 	return F.common("Internet+Explorer")
 
 }
 
+// InternetExplorer UserAgent
 func (F *FakeUserAgent) InternetExplorer() string {
 	return F.IE()
 }
 
+// Msie UserAgent
 func (F *FakeUserAgent) Msie() string {
 	return F.IE()
 }
 
+// Chrome UserAgent
 func (F *FakeUserAgent) Chrome() string {
 	return F.common("Chrome")
 }
 
+// Google UserAgent
 func (F *FakeUserAgent) Google() string {
 	return F.Chrome()
 }
 
+// Opera UserAgent
 func (F *FakeUserAgent) Opera() string {
 	return F.common("Opera")
 }
 
+// Safari UserAgent
 func (F *FakeUserAgent) Safari() string {
 	return F.common("Safari")
 }
 
+// FireFox UserAgent
 func (F *FakeUserAgent) FireFox() string {
 	return F.common("Firefox")
 }
 
+// FF UserAgent
 func (F *FakeUserAgent) FF() string {
 	return F.FireFox()
 }
 
+// Random UserAgent
 func (F *FakeUserAgent) Random() string {
 	randomChoice := []string{
 		"Chrome",
