@@ -16,10 +16,10 @@
 
 从下面几个网站中抓取到 User-Agent 数据。
 
-- [http://useragentstring.com/](http://useragentstring.com/)
+- [~~http://useragentstring.com/~~](http://useragentstring.com/)
 - [https://www.w3schools.com/browsers/default.asp](https://www.w3schools.com/browsers/default.asp)
 - [~~http://d2g6u4gh6d9rq0.cloudfront.net/browsers/fake_useragent_0.1.9.json~~](http://d2g6u4gh6d9rq0.cloudfront.net/browsers/fake_useragent_0.1.9.json)
-
+- [https://fake-useragent.herokuapp.com/browsers/0.1.8](https://fake-useragent.herokuapp.com/browsers/0.1.8)
 
 ### 2. User-Agent 的知识
 
@@ -45,7 +45,7 @@ import (
 )
 
 func main() {
-	fakeUserAgent := application.NewFakeUserAgent(true, false, false)
+	fakeUserAgent := application.NewFakeUserAgent(false)
 	fmt.Println(fakeUserAgent.Random())
 	fmt.Println(fakeUserAgent.Safari())
 	fmt.Println(fakeUserAgent.Chrome())
