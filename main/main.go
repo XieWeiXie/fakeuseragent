@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	fakeUserAgent := application.NewFakeUserAgent(true, false, false)
+	fakeUserAgent := application.NewFakeUserAgent(false)
 	fmt.Println(fakeUserAgent.Random())
 	fmt.Println(fakeUserAgent.Safari())
 	fmt.Println(fakeUserAgent.Chrome())

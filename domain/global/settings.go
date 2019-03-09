@@ -9,6 +9,7 @@ var (
 	BROWSERS_STATS_PAGE = "https://www.w3schools.com/browsers/default.asp"
 	BROWSER_BASE_PAGE   = "http://useragentstring.com/pages/useragentstring.php?name=%s"
 	CACHE_SERVER        = "http://d2g6u4gh6d9rq0.cloudfront.net/browsers/fake_useragent_%s.json"
+	HEROKUAPP           = "https://fake-useragent.herokuapp.com/browsers/0.1.8"
 )
 
 var OVERRIDES = make(map[string]string)

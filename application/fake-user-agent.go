@@ -18,25 +18,28 @@ import (
 
 // FakeUserAgent: CloudFrontNetOk field should always be false
 type FakeUserAgent struct {
-	UserAgentStringOk bool
-	CloudFrontNetOk   bool
+	UserAgentStringOk bool // should be remove
+	CloudFrontNetOk   bool // should be remove
 	Cache             bool
+	herokuapp         bool
 }
 
 var (
 	ErrUserAgent = errors.New("user agent err")
 )
 
-func NewFakeUserAgent(UserAgentStringOk bool, CloudFrontNetOk bool, CacheOK bool) *FakeUserAgent {
+func NewFakeUserAgent(CacheOK bool) *FakeUserAgent {
 	return &FakeUserAgent{
-		UserAgentStringOk: UserAgentStringOk,
-		CloudFrontNetOk:   CloudFrontNetOk,
-		Cache:             CacheOK,
+		Cache:     CacheOK,
+		herokuapp: true,
 	}
 }
 
 // IE UserAgent
 func (F *FakeUserAgent) IE() string {
+	if F.herokuapp {
+		return F.common("internetexplorer")
+	}
 	return F.common("Internet+Explorer")
 
 }
@@ -53,6 +56,9 @@ func (F *FakeUserAgent) Msie() string {
 
 // Chrome UserAgent
 func (F *FakeUserAgent) Chrome() string {
+	if F.herokuapp {
+		return F.common("chrome")
+	}
 	return F.common("Chrome")
 }
 
@@ -63,16 +69,25 @@ func (F *FakeUserAgent) Google() string {
 
 // Opera UserAgent
 func (F *FakeUserAgent) Opera() string {
+	if F.herokuapp {
+		return F.common("opera")
+	}
 	return F.common("Opera")
 }
 
 // Safari UserAgent
 func (F *FakeUserAgent) Safari() string {
+	if F.herokuapp {
+		return F.common("safari")
+	}
 	return F.common("Safari")
 }
 
 // FireFox UserAgent
 func (F *FakeUserAgent) FireFox() string {
+	if F.herokuapp {
+		return F.common("firefox")
+	}
 	return F.common("Firefox")
 }
 
@@ -90,20 +105,38 @@ func (F *FakeUserAgent) Random() string {
 		"Opera",
 		"Internet+Explorer",
 	}
+	randomChoiceOther := []string{
+		"chrome",
+		"firefox",
+		"safari",
+		"opera",
+		"internetexplorer",
+	}
 	r := rand.NewSource(time.Now().UnixNano())
 	random := rand.New(r)
+	var browserType string
+	if F.herokuapp {
+		browserType = randomChoiceOther[random.Intn(len(randomChoiceOther))]
+	} else {
+		browserType = randomChoice[random.Intn(len(randomChoice))]
 
-	browserType := randomChoice[random.Intn(len(randomChoice))]
+	}
 	return F.common(browserType)
 }
 
 func (F *FakeUserAgent) common(browserType string) string {
+
 	r := rand.NewSource(time.Now().Unix())
 	randomChoice := rand.New(r)
 	if F.Cache {
 		index := randomChoice.Intn(len(global.LOCALUSERAGENT[browserType]))
 		return global.LOCALUSERAGENT[browserType][index]
 
+	}
+	docForHeroKuapp, _ := download.ResponseDownload(global.HEROKUAPP)
+	if F.herokuapp {
+		result, _ := parse.HerokuApp(docForHeroKuapp, browserType)
+		return result
 	}
 
 	var url string

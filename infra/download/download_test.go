@@ -18,7 +18,7 @@ func TestResponseDownload(t *testing.T) {
 	}{
 		// TODO: Add test cases.
 		{
-			name: "test for download",
+			name: "test for download from baidu.com",
 			args: args{
 				url: "https://www.baidu.com",
 			},
