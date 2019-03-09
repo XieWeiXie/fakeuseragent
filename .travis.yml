@@ -15,5 +15,8 @@ before_install:
   - go test -cpu=1,2,4 -v -tags integration ./...
   - go vet $(go list ./... | grep -v /vendor/)
 
-script: true
-#  - go test -race  ./... -coverprofile=coverage.txt -covermode=atomic
+script:
+  - go test -race  ./... -coverprofile=coverage.txt -covermode=atomic
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t 2698cef8-0920-4e4e-8b60-304231fa756d
