@@ -12,6 +12,12 @@
 [![](https://img.shields.io/badge/Bilibili-@Wuxiaoshen-F59581.svg)](https://space.bilibili.com/10056291)
 
 
+### 0. Install
+
+``` 
+go get github.com/wuxiaoxiaoshen/fakeuseragent/application
+```
+
 
 ### 1. Features
 
