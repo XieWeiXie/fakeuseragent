@@ -1,6 +1,8 @@
 package global
 
-import "fmt"
+import (
+	"fmt"
+)
 
 const Version = "0.1.10"
 
@@ -8,8 +10,10 @@ const Version = "0.1.10"
 var (
 	BROWSERS_STATS_PAGE = "https://www.w3schools.com/browsers/default.asp"
 	BROWSER_BASE_PAGE   = "http://useragentstring.com/pages/useragentstring.php?name=%s"
-	CACHE_SERVER        = "http://d2g6u4gh6d9rq0.cloudfront.net/browsers/fake_useragent_%s.json"
-	HEROKUAPP           = "https://fake-useragent.herokuapp.com/browsers/0.1.8"
+	// Deprecated 已失效 2019-12-13
+	CACHE_SERVER = "http://d2g6u4gh6d9rq0.cloudfront.net/browsers/fake_useragent_%s.json"
+	// Deprecated 已失效 2019-12-13
+	HEROKUAPP = "https://fake-useragent.herokuapp.com/browsers/0.1.8"
 )
 
 var OVERRIDES = make(map[string]string)
@@ -21,8 +25,8 @@ func init() {
 		"Edge/IE": "Internet Explorer",
 		"IE/Edge": "Internet Explorer",
 	}
+	// Deprecated
 	CACHE_SERVER = fmt.Sprintf(CACHE_SERVER, Version)
-
 	LOCALUSERAGENT = map[string][]string{
 		"Chrome": []string{
 			"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36",
