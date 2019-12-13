@@ -28,7 +28,7 @@ func TestResponseDownload(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			re, err := ResponseDownload(tt.args.url)
-			fmt.Println(re.Html())
+			fmt.Println(re.Url)
 			if err != nil {
 				t.Errorf("ResponseDownload() error = %v, wantErr %v", err, tt.wantErr)
 				return

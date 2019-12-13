@@ -3,7 +3,7 @@
 // Example:
 //
 //	func main() {
-//		fakeUserAgent := application.NewFakeUserAgent(false)
+//		fakeUserAgent := application.NewFakeUserAgent(true, false)
 //		fmt.Println(fakeUserAgent.Random())
 //		fmt.Println(fakeUserAgent.Safari())
 //		fmt.Println(fakeUserAgent.Chrome())
