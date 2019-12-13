@@ -6,10 +6,6 @@
 [![codecov](https://codecov.io/gh/wuxiaoxiaoshen/fakeuseragent/branch/master/graph/badge.svg)](https://codecov.io/gh/wuxiaoxiaoshen/fakeuseragent)
 ![](https://img.shields.io/badge/fakeuseragent-v1.0.0-519dd9.svg)
 ![](https://img.shields.io/badge/language-golang-orange.svg)
-[![](https://img.shields.io/badge/weibo-@谢小小路-red.svg)](https://weibo.com/1948244870/profile?topnav=1&wvr=6)
-[![](https://img.shields.io/badge/jianshu-@谢小路-F59581.svg)](https://www.jianshu.com/u/58f0817209aa)
-[![](https://img.shields.io/badge/zhihu-@谢伟-F59581.svg)](https://www.zhihu.com/people/wu-xiao-shen-16/activities)
-[![](https://img.shields.io/badge/Bilibili-@Wuxiaoshen-F59581.svg)](https://space.bilibili.com/10056291)
 
 
 ### 0. Install

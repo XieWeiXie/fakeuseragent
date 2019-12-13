@@ -27,3 +27,6 @@ jobs:
 
     - name: Go run main.go
       run: go run main/main.go
+
+    - name: Go get
+      run: go get github.com/wuxiaoxiaoshen/fakeuseragent/application
